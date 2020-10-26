@@ -98,18 +98,23 @@ public class Rational
     // Methods you'll write for homework:
     // Returns whether or not the Rational is a negative number
     public boolean isNegative() { 
-        return false; // YOUR CODE HERE
+        if(this.denominator/this.numerator >= 0)
+            return false;
+        return true;
     }
 
     // Calculates the reciprocal of a Rational number.
     // The reciprocal of 3/4 is 4/3, the reciprocal of 1/2 is 2/1
     public Rational reciprocal() {
-        return null; // YOUR CODE HERE
+        Rational r = new Rational(this.denominator,this.numerator);
+        return r;
     }
 
     // Checks whether the current Rational is the exactly the same as other
     public boolean equals(Rational other) {
-        return false; // YOUR CODE HERE
+        if  (other.numerator == this.numerator && other.denominator == this.denominator)
+            return true;
+        return false;
     }
 
 
